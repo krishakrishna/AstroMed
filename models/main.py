@@ -1,9 +1,7 @@
-# AstroMed
-
 from models.health_risk_model import predict_health_risk
 from sensors.sensor_interface import get_sensor_data
-from nlp.chatbot import chatbot_response
-from vision.facial_analysis import analyze_fatigue
+from nlp.chatbot import chatbot_response # type: ignore
+from vision import analyze_fatigue
 import time
 
 def main():
