@@ -1,33 +1,3 @@
 # AstroMed
 
-from models.health_risk_model import predict_health_risk
-from sensors.sensor_interface import get_sensor_data
-from nlp.chatbot import chatbot_response
-from vision.facial_analysis import analyze_fatigue
-import time
-
-def main():
-    print("🚀 AstroMed AI - Space Health Monitoring System 🚀")
-    
-    while True:
-        # Get real-time biometric data
-        health_data = get_sensor_data()
-        print(f"🩺 Biometric Data: {health_data}")
-
-        # Predict health risk
-        risk = predict_health_risk(health_data)
-        print(f"⚠️ Health Risk Prediction: {risk}")
-
-        # Vision analysis (Fatigue & Stress)
-        fatigue_level = analyze_fatigue()
-        print(f"😴 Fatigue Level: {fatigue_level}")
-
-        # Chatbot interaction
-        query = input("👩‍🚀 Ask AstroMed a question: ")
-        response = chatbot_response(query)
-        print(f"🤖 AstroMed: {response}")
-
-        time.sleep(5)  # Simulate real-time monitoring delay
-
-if __name__ == "__main__":
-    main()
+AstroMed is an advanced AI-driven health monitoring system designed to ensure astronaut well-being on long-duration space missions. By integrating machine learning, biometric tracking, natural language processing (NLP), and computer vision, AstroMed provides real-time health risk predictions and early detection of potential medical issues. Unlike traditional health monitoring, which relies on periodic checkups, AstroMed enables continuous, autonomous monitoring, making it ideal for missions beyond Earth, where immediate medical intervention is limited. With applications in deep-space exploration, Moon and Mars missions, and even remote locations on Earth, AstroMed is revolutionizing the future of space medicine.
